@@ -14,6 +14,10 @@ const HomeScreen = () => {
   const getProducts = useSelector((state) => state.getProducts);
   const { products, loading, error } = getProducts;
 
+/* The `useEffect` hook is used to perform side effects in a functional component. In this case, it is
+used to dispatch the `listProducts` action to fetch the products from the server when the component
+mounts. The `dispatch` function and `listProducts` action are passed as dependencies to the
+`useEffect` hook, so that the effect is only triggered when these dependencies change. */
   useEffect(() => {
     dispatch(listProducts());
   }, [dispatch]);

@@ -1,5 +1,6 @@
-require("dotenv").config();
+/* This is a basic setup for a Node.js server using Express framework. */
 
+require("dotenv").config();
 
 const connectDB = require('./config/db')
 connectDB();

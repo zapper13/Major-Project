@@ -1,6 +1,15 @@
 import "./CartItem.css";
 import { Link } from "react-router-dom";
 
+/**
+ * The `CartItem` function returns a component that displays information about a product in a shopping
+ * cart, including an image, name, price, quantity selector, and a button to remove the item from the
+ * cart.
+ * @returns The `CartItem` component is being returned, which renders a div containing the image, name,
+ * price, quantity select dropdown, and a delete button for a specific item in the cart. The component
+ * receives props such as `item`, `qtyChangeHandler`, and `removeHandler` to handle changes in quantity
+ * and removal of the item from the cart.
+ */
 const CartItem = ({ item, qtyChangeHandler, removeHandler }) => {
   return (
     <div className="cartitem">

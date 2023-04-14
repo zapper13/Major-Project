@@ -1,6 +1,12 @@
 import "./Product.css";
 import { Link } from "react-router-dom";
 
+/**
+ * The function returns a component that displays product information and an image, with a link to view
+ * more details.
+ * @returns The `Product` component is being returned, which renders a product card with an image,
+ * name, description, price, and a "View" button that links to a specific product page.
+ */
 const Product = ({ imageUrl, description, price, name, productId }) => {
   return (
     <div className="product">

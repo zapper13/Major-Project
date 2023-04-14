@@ -1,3 +1,7 @@
+/* This is an array of objects representing different products with their names, images, descriptions,
+prices, and stock counts. The module.exports statement at the end of the code exports this array of
+products to be used in other parts of the codebase. */
+
 const products = [
     {
       name: "PlayStation 5",

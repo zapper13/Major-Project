@@ -6,6 +6,10 @@ import { useSelector, useDispatch } from "react-redux";
 import { getProductDetails } from "../redux/actions/productActions";
 import { addToCart } from "../redux/actions/cartActions";
 
+/**
+ * This is a functional component in JavaScript that displays product details and allows the user to
+ * adjust the quantity.
+ */
 const ProductScreen = ({ match, history }) => {
   const [qty, setQty] = useState(1);
   const dispatch = useDispatch();
@@ -13,6 +17,10 @@ const ProductScreen = ({ match, history }) => {
   const productDetails = useSelector((state) => state.getProductDetails);
   const { loading, error, product } = productDetails;
 
+  /**
+   * This code block uses the useEffect hook to dispatch an action to get product details and defines a
+   * function to add the product to the cart and redirect to the cart page.
+   */
   useEffect(() => {
     if (product && match.params.id !== product._id) {
       dispatch(getProductDetails(match.params.id));
@@ -24,6 +32,13 @@ const ProductScreen = ({ match, history }) => {
     history.push(`/cart`);
   };
 
+  /* This is the JSX code that defines the layout and content of the ProductScreen component. It
+  displays the product details, including the product image, name, price, description, and stock
+  status. It also allows the user to select the quantity of the product they want to add to their
+  cart and provides a button to add the product to the cart. The code uses conditional rendering to
+  display a loading message if the product details are still being fetched, an error message if
+  there was an error fetching the product details, or the product details if they were successfully
+  fetched. */
   return (
     <div className="productscreen">
       {loading ? (
